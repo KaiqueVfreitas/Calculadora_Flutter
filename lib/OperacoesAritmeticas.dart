@@ -1,41 +1,42 @@
-
-// declara o nome da classse que será instanciada no arquivo principal
+// Arquivo que fica no back-end só fazendo as funções do aplicativo
 class OperacoesAritmeticas {
-//método para somar dois números
-  double Adicao(double nm1, double nm2) {
-    try{
-      return nm1 + nm2;
-    }catch(e){
-        throw Exception("Não foi possível fazer a operação de adição");
+  // Método para somar dois números
+  double Adicao(double num1, double num2) {
+    try {
+      return num1 + num2;
+    } catch (e) {
+      throw Exception("Não foi possível fazer a operação de adição");
     }
   }
 
-  double Subtracao(double nm1, double nm2){
-    try{
-      return nm1 - nm2;
-    }catch(e){
-        throw Exception("Não foi possível fazer a operação de subtração");
+  // Método para subtrair dois números
+  double Subtracao(double num1, double num2) {
+    try {
+      return num1 - num2;
+    } catch (e) {
+      throw Exception("Não foi possível fazer a operação de subtração");
     }
   }
 
-  double Divisao(double nm1, double nm2){
-    // verfica se o divisor não é igual a zero
-    if (nm2 == 0) {
-      throw Exception("Não é possível dividir por zero")
+  // Método para dividir dois números
+  double Divisao(double num1, double num2) {
+    // Verifica se o divisor é zero para evitar divisão por zero
+    if (num2 == 0) {
+      throw Exception("Não é possível dividir por zero");
     }
-    try{
-      return nm1 / nm2;
-    }catch(e){
-        throw Exception("Não foi possível fazer a operação de divisão");
+    try {
+      return num1 / num2;
+    } catch (e) {
+      throw Exception("Não foi possível fazer a operação de divisão");
     }
   }
 
-  double Multiplicacao(double nm1, double nm2){
-    try{
-        return nm1 * nm2;
-    }catch(e){
+  // Método para multiplicar dois números
+  double Multiplicacao(double num1, double num2) {
+    try {
+      return num1 * num2;
+    } catch (e) {
       throw Exception("Não foi possível fazer a operação de multiplicação");
     }
-
   }
 }
